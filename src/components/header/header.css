@@ -1,0 +1,222 @@
+.header {
+  width: 100%;
+  background-color: var(--color-football-section);
+}
+
+.header .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__content {
+  position: relative;
+  z-index: 2;
+  width: 55%;
+}
+
+.header__title {
+  position: relative;
+  z-index: 2;
+  width: 29.375rem;
+  margin: 5rem 0 0;
+  font-family: "Sequel Sans";
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 4.6875rem;
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    var(--color-primary-2) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: header-fade-in 0.7s ease both;
+}
+
+.header__player {
+  position: absolute;
+  right: 30%;
+  bottom: -5rem;
+  z-index: 3;
+  animation: player-appear 0.8s ease 0.3s both;
+}
+
+.header__ball {
+  position: absolute;
+  top: 1rem;
+  right: 56%;
+  z-index: 1;
+  filter: saturate(0.5);
+  animation: ball-float 4s ease-in-out infinite;
+}
+
+.header__description {
+  position: relative;
+  top: 9.375rem;
+  left: 25rem;
+  z-index: 4;
+  width: 24rem;
+  animation: header-fade-in 0.7s ease 0.2s both;
+}
+
+.header__text {
+  margin: 0 0 1.5rem;
+  color: var(--color-primary);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+}
+
+.header__button {
+  width: 17.8125rem;
+  padding: 0.75rem 2rem;
+  color: var(--color-button-text);
+  font-size: 1.25rem;
+  line-height: 2.375rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.header__button:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.5rem 1.25rem rgb(38 38 38 / 20%);
+}
+
+.header__button:active {
+  transform: translateY(0);
+}
+
+.header__news {
+  position: relative;
+  top: 6.25rem;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  animation: header-fade-in 0.7s ease 0.4s both;
+}
+
+.header__news-button {
+  padding: 0.5rem 1rem;
+  color: var(--color-primary-2);
+  font-size: 1.25rem;
+  font-weight: 500;
+  background-color: var(--color-button-text);
+  border: none;
+  border-radius: 0.1875rem;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.header__news-button:hover {
+  transform: translateY(-0.15rem);
+
+  background-color: var(--color-primary);
+
+  color: var(--color-button-text);
+}
+
+.header__news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header__news-item {
+  position: relative;
+  width: 16.875rem;
+  height: 14.5625rem;
+  margin-bottom: 0.625rem;
+  padding: 1.5rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  background:
+    linear-gradient(to bottom, transparent 0%, transparent 50%, #f2f2f2 65%),
+    url("../img/header_atletic.png") center / cover no-repeat;
+}
+
+.header__news-item:nth-of-type(2) {
+  background:
+    linear-gradient(to bottom, transparent 0%, transparent 50%, #f2f2f2 65%),
+    url("../img/header-car.png") center / cover no-repeat;
+}
+
+.header__news-item:hover {
+  transform: translateY(-0.375rem);
+  box-shadow: 0 0.75rem 1.5rem rgb(38 38 38 / 18%);
+}
+
+.header__news-item.active {
+  transform: translateY(-0.375rem) scale(1.02);
+  box-shadow: 0 0.75rem 1.5rem rgb(38 38 38 / 25%);
+}
+
+.header__news-meta {
+  margin: 7.75rem 0 1rem;
+  color: rgb(38 38 38 / 60%);
+  font-size: 0.625rem;
+  font-weight: 500;
+  transform: translateY(0.625rem);
+}
+
+.header__news-title {
+  margin: 0;
+  color: var(--color-primary);
+  font-family: "Sequel Sans";
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+@keyframes header-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes player-appear {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes ball-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.5rem);
+  }
+}

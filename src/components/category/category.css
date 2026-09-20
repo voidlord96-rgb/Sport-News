@@ -1,0 +1,130 @@
+.category {
+  width: 100%;
+  height: 90vh;
+  margin-top: 12.5rem;
+}
+
+.category__title {
+  margin: 0 0 2rem;
+  font-family: "Sequel Sans";
+  font-weight: 500;
+  line-height: 2.375rem;
+}
+
+.category__grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 4.6875rem);
+  gap: 1.875rem;
+  grid-template-areas:
+    "football football empty-2 empty-2 car-sport car-sport empty-4 empty-4"
+    "empty-1 empty-1 empty-2 empty-2 empty-3 empty-3 empty-4 empty-4"
+    "empty-1 empty-1 empty-2 empty-2 empty-3 empty-3 empty-4 empty-4"
+    "empty-1 empty-1 empty-2 empty-2 empty-3 empty-3 empty-4 empty-4"
+    "empty-1 empty-1 basketball basketball empty-3 empty-3 table-tennis table-tennis";
+}
+
+.category__item {
+  margin: 0;
+  font-family: "Sequel Sans";
+  font-size: 2.3125rem;
+  font-weight: 900;
+}
+
+.category__item:not([class*="empty"]) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-category);
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: category-item-appear 0.6s ease both;
+}
+
+.category__item:not([class*="empty"]) span {
+  font-family: "Sequel Sans";
+  text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(180deg, #8a8a8a 0%, #535353 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: filter 0.3s ease;
+}
+
+.category__item:not([class*="empty"]):hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1.25rem rgb(38 38 38 / 15%);
+}
+
+.category__item:not([class*="empty"]):hover span,
+.category__item:not([class*="empty"]).active span {
+  filter: brightness(1.15);
+}
+
+.category__item:not([class*="empty"]).active {
+  transform: translateY(-0.25rem) scale(1.02);
+  box-shadow: 0 0.5rem 1.25rem rgb(38 38 38 / 20%);
+}
+
+.category__item--football {
+  grid-area: football;
+  animation-delay: 0.1s;
+}
+
+.category__item--basketball {
+  grid-area: basketball;
+  animation-delay: 0.2s;
+}
+
+.category__item--car-sport {
+  grid-area: car-sport;
+  animation-delay: 0.3s;
+}
+
+.category__item--table-tennis {
+  grid-area: table-tennis;
+  animation-delay: 0.4s;
+}
+
+.category__item--empty-1,
+.category__item--empty-2,
+.category__item--empty-3,
+.category__item--empty-4 {
+  border-radius: 0.375rem;
+}
+
+.category__item--empty-1 {
+  grid-area: empty-1;
+  background: url("../img/Category-socer.png") center / cover no-repeat;
+}
+
+.category__item--empty-2 {
+  grid-area: empty-2;
+  background: url("../img/Category-bassetball.png") center / cover no-repeat;
+}
+
+.category__item--empty-3 {
+  grid-area: empty-3;
+  background: url("../img/Category-car.png") center / cover no-repeat;
+}
+
+.category__item--empty-4 {
+  grid-area: empty-4;
+  background: url("../img/Category-pingpong.png") center / cover no-repeat;
+}
+
+@keyframes category-item-appear {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

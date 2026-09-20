@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("./components/fonts/DMSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./components/fonts/DMSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./components/fonts/DMSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./components/fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sequel Sans";
+  src: url("./components/fonts/Sequel Sans Black Disp.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sequel Sans";
+  src: url("./components/fonts/Sequel Sans Medium Disp.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sequel Sans";
+  src: url("./components/fonts/Sequel Sans Roman Disp.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sequel Sans";
+  src: url("./components/fonts/Sequel Sans Semi Bold Disp.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans";
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #262626;
+  --color-primary-2: #b8c2ce;
+  --color-white: #ffffff;
+  --color-button-text: #e1e8f0;
+  --color-news-text: #696868;
+  --color-category: #ebeef3;
+  --color-football-section: #f9fafc;
+  --color-arrow-left: #bab8b8;
+  --color-player-name: #3e3232;
+}
+
+.container {
+  max-width: 1266px;
+  width: 100%;
+  margin: 0 auto;
+  /* border: 2px solid black; */
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+body {
+  background-color: #F9FAFC;
+}
