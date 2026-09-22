@@ -37,7 +37,7 @@ Sport News - frontend-проект, созданный на основе диз�
 
 ## Скриншот проекта
 
-![Sport News](Landing page.png)
+![Sport-News](Landingpage.png)
 
 ## Структура проекта
 
